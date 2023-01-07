@@ -8,11 +8,15 @@ Category.init(
   {
     // define columns
     id: {
-      type: INTEGER
+      type: INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
   },
     category_name: {
       type: DataTypes.STRING
   },
+},
   {
     sequelize,
     timestamps: false,
@@ -20,6 +24,6 @@ Category.init(
     underscored: true,
     modelName: 'category',
   }
-});
+);
 
 module.exports = Category;
